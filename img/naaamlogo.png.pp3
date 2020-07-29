@@ -13,7 +13,7 @@ Clip=0.02
 Compensation=0
 Brightness=0
 Contrast=0
-Saturation=0
+Saturation=54
 Black=0
 HighlightCompr=0
 HighlightComprThreshold=33
@@ -62,7 +62,7 @@ GainTransmissionCurve=1;0;0.10000000000000001;0.34999999999999998;0;0.25;0.25;0.
 
 [Channel Mixer]
 Red=100;0;0;
-Green=0;100;0;
+Green=1;100;0;
 Blue=0;0;100;
 
 [Black & White]
@@ -72,12 +72,12 @@ Auto=false
 ComplementaryColors=true
 Setting=NormalContrast
 Filter=None
-MixerRed=33
+MixerRed=43
 MixerOrange=33
 MixerYellow=33
 MixerGreen=33
 MixerCyan=33
-MixerBlue=33
+MixerBlue=30
 MixerMagenta=33
 MixerPurple=33
 GammaRed=0
@@ -147,23 +147,23 @@ Uniformity=50
 
 [White Balance]
 Setting=Camera
-Temperature=6504
-Green=1
+Temperature=6490
+Green=1.002
 Equal=1
 TemperatureBias=0
 
 [Color appearance]
-Enabled=false
-Degree=90
+Enabled=true
+Degree=100
 AutoDegree=true
-Degreeout=90
+Degreeout=85
 AutoDegreeout=true
 Surround=Average
 Surrsrc=Average
 AdaptLum=16
 Badpixsl=0
 Model=RawT
-Algorithm=No
+Algorithm=JC
 J-Light=0
 Q-Bright=0
 C-Chroma=0
@@ -175,7 +175,7 @@ H-Hue=0
 RSTProtection=0
 AdaptScene=2000
 AutoAdapscen=true
-YbScene=18
+YbScene=90
 Autoybscen=true
 SurrSource=false
 Gamut=true
@@ -217,7 +217,7 @@ C2Method=AUTO
 SMethod=shal
 MedMethod=soft
 RGBMethod=soft
-MethodMed=none
+MethodMed=Lonly
 Redchro=0
 Bluechro=0
 Gamma=1.7
@@ -244,18 +244,18 @@ LocalContrast=0
 Radius=40
 
 [Crop]
-Enabled=false
-X=-1
-Y=-1
-W=15000
-H=15000
-FixedRatio=true
+Enabled=true
+X=569
+Y=256
+W=1027
+H=518
+FixedRatio=false
 Ratio=3:2
 Orientation=As Image
 Guide=Frame
 
 [Coarse Transformation]
-Rotate=0
+Rotate=270
 HorizontalFlip=false
 VerticalFlip=false
 
@@ -272,7 +272,7 @@ Amount=0
 LcMode=none
 LCPFile=
 UseDistortion=true
-UseVignette=true
+UseVignette=false
 UseCA=false
 LFCameraMake=
 LFCameraModel=
@@ -309,7 +309,7 @@ CenterY=0
 
 [Resize]
 Enabled=false
-Scale=1
+Scale=0.88
 AppliesTo=Cropped area
 Method=Lanczos
 DataSpecified=3
@@ -333,7 +333,7 @@ DeconvDamping=0
 DeconvIterations=100
 
 [Color Management]
-InputProfile=(cameraICC)
+InputProfile=(embedded)
 ToneCurve=false
 ApplyLookTable=false
 ApplyBaselineExposureOffset=true
@@ -358,7 +358,7 @@ TilesMethod=full
 DaubMethod=4_
 ChoiceLevMethod=all
 BackMethod=grey
-LevMethod=4_
+LevMethod=4
 DirMethod=all
 CBgreenhigh=0
 CBgreenmed=0
@@ -480,7 +480,7 @@ gCurve=0;
 bCurve=0;
 
 [ColorToning]
-Enabled=false
+Enabled=true
 Method=Lab
 Lumamode=true
 Twocolor=Std
@@ -498,9 +498,9 @@ Greenhigh=0
 Bluehigh=0
 Autosat=true
 OpacityCurve=1;0;0.29999999999999999;0.34999999999999998;0;0.25;0.80000000000000004;0.34999999999999998;0.34999999999999998;0.69999999999999996;0.80000000000000004;0.34999999999999998;0.34999999999999998;1;0.29999999999999999;0;0;
-ColorCurve=1;0.050000000000000003;0.62;0.25;0.25;0.58499999999999996;0.11;0.25;0.25;
-SatProtectionThreshold=30
-SaturatedOpacity=80
+ColorCurve=1;0.050000000000000003;0.47813148788927351;0.25;0.25;0.58499999999999996;0.11;0.25;0.25;
+SatProtectionThreshold=15
+SaturatedOpacity=0
 Strength=50
 HighlightsColorSaturation=60;80;
 ShadowsColorSaturation=80;208;
@@ -508,9 +508,9 @@ ClCurve=3;0;0;0.34999999999999998;0.65000000000000002;1;1;
 Cl2Curve=3;0;0;0.34999999999999998;0.65000000000000002;1;1;
 
 [RAW]
-DarkFrame=
+DarkFrame=/szeva
 DarkFrameAuto=false
-FlatFieldFile=
+FlatFieldFile=/szeva
 FlatFieldAutoSelect=false
 FlatFieldBlurRadius=32
 FlatFieldBlurType=Area Flatfield
